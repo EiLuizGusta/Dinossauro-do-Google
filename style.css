@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.gameBoard{
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid green;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.character{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump{
+    animation: character-jump 500ms ease-out;
+}
+
+@keyframes character-jump{
+    0%{
+        bottom: 0;
+    }
+    40%{
+        bottom: 180px;
+    }
+    50%{
+        bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+.obstacle{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: obstacle-animation 1.5s infinite linear;
+}
+
+@keyframes obstacle-animation{
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+}
